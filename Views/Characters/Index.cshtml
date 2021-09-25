@@ -1,0 +1,20 @@
+@model IEnumerable<eternia.Models.Character>
+<head>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<div class="container">
+@{
+    Layout = null;
+
+    foreach (var i in Model)
+    {
+        string dir = "img/0" + @i.Id + ".jpg";
+            <div class="card">
+                <h1>Nome: @i.Name</h1>
+                <img src="@dir">
+                <p>Papel: @i.Role</p>
+            </div>
+
+    }
+}
+</div>
